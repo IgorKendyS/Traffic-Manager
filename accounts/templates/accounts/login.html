@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Login - Gestão de Tráfego{% endblock %}
+{% block 'title' %}Login - Gestão de Tráfego{% endblock %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
 {% endblock %}
 
-{% block body %}
+{% block 'content' %}
 <div class="row justify-content-center">
     <div class="col-md-6">
         <div class="card">
@@ -38,6 +38,6 @@
 </div>
 {% endblock %}
 
-{% block extra_js %}
+{% block 'body' %}
     <script src="{% static 'accounts/js/accounts.js' %}"></script>
 {% endblock %}

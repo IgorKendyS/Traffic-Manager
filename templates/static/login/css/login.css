@@ -1,0 +1,13 @@
+.card{
+    background-color: var(--dark-color);
+}
+
+label, h2{
+    color: var(--button-color);
+}
+
+input{
+    background-color: var(--light-color) !important;
+    border: none !important;
+    font-weight: bold !important;
+}
