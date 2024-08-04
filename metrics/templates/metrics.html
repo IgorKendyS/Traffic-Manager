@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Métricas{% endblock %}
+{% block 'title' %}Métricas{% endblock %}
 
-{% block extra_css %}
+{% block 'head' %}
     <link rel="stylesheet" href="{% static 'metrics/css/metrics.css' %}">
 {% endblock %}
 
-{% block content %}
-    <h1>Teste</h1>
+{% block 'content' %}
+    <h1>Métricas</h1>
 {% endblock %}
 
-{% block extra_js %}
+{% block 'body' %}
     <script src="{% static 'metrics/js/metrics.js' %}"></script>
 {% endblock %}

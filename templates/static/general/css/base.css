@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+body{
+  background-color: #2A2A2A;
+}
 .sidebar{
   position: fixed;
   left: 0;
@@ -15,6 +18,9 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .sidebar.open{
   width: 250px;
@@ -243,8 +249,14 @@
   font-weight: 500;
   margin: 18px
 }
+
+footer{
+  background-color: rgb(17, 17, 17);
+}
+
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
   }
 }
+

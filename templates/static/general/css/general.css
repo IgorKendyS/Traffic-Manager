@@ -5,6 +5,26 @@
     --light-color: #ffc27f;
     --contrast-color: #f88863;
     --differential-color: #ffe29a;
-    --button-color: #f8f8f8;
+    --button-color: #ac4147;
+    --hover-color: #80282c;
+    --label-color: #ffffff;
 
+}
+
+/*confirmar logout*/
+
+#logoutModal .modal-content {
+    border-radius: 15px;
+}
+
+#logoutModal .modal-header {
+    background-color: #f8f9fa;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#logoutModal .modal-footer {
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
