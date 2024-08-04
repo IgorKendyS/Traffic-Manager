@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import GoogleAdsData, FacebookAdsData
 
-# Register your models here.
+admin.site.register(GoogleAdsData)
+admin.site.register(FacebookAdsData)

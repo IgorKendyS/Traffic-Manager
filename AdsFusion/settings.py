@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'dashboard',
     'metrics',
     'pages',
+    'configuration',
 ]
 
 MIDDLEWARE = [

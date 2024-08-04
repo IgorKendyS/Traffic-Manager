@@ -8,7 +8,41 @@
 {% endblock %}
 
 {% block 'content' %}
-    <h1>Métricas</h1>
+<h1>Métricas de Anúncios</h1>
+
+<div class="btn-group mb-3" role="group" aria-label="Plataforma de Anúncios">
+    <a href="?platform=google" class="btn btn-primary {% if current_platform == 'google' %}active{% endif %}">Google Ads</a>
+    <a href="?platform=facebook" class="btn btn-primary {% if current_platform == 'facebook' %}active{% endif %}">Facebook Ads</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            {% for column in columns %}
+            <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.date }}</td>
+            <td>{{ item.campaign_name }}</td>
+            {% if current_platform == 'facebook' %}
+            <td>{{ item.reach }}</td>
+            <td>{{ item.impressions }}</td>
+            <td>{{ item.spend }}</td>
+            <td>{{ item.link_clicks }}</td>
+            {% else %}
+            <td>{{ item.clicks }}</td>
+            <td>{{ item.impressions }}</td>
+            <td>{{ item.cost }}</td>
+            <td>{{ item.conversions }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
 
 {% block 'body' %}
