@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+<h2>Suas Contas do Facebook</h2>
+<a href="{% url 'add_facebook_account' %}">Adicionar Nova Conta</a>
+<ul>
+{% for account in accounts %}
+    <li>{{ account.account_name }} ({{ account.account_id }})</li>
+{% empty %}
+    <li>Você não tem contas do Facebook cadastradas.</li>
+{% endfor %}
+</ul>
+{% endblock %}

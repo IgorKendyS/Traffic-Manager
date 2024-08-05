@@ -10,6 +10,13 @@
 {% block 'content' %}
 <h1>Métricas de Anúncios</h1>
 
+{% if current_platform == 'facebook' %}
+<form method="post" action="{% url 'import_facebook_data' %}">
+    {% csrf_token %}
+    <button type="submit">Importar Dados do Facebook</button>
+</form>
+{% endif %}
+
 <div class="btn-group mb-3" role="group" aria-label="Plataforma de Anúncios">
     <a href="?platform=google" class="btn btn-primary {% if current_platform == 'google' %}active{% endif %}">Google Ads</a>
     <a href="?platform=facebook" class="btn btn-primary {% if current_platform == 'facebook' %}active{% endif %}">Facebook Ads</a>
